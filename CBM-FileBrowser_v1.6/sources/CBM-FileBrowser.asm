@@ -728,6 +728,8 @@ jsr CLEARSCREEN
 
 ; Set text color for C64 with V2 KERNAL 
 !if target = 64 { 
+    lda $17 ; lower case mode
+    sta $d018
     lda #forecolor2 
     ldx #$00 
 loop 
